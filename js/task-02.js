@@ -9,11 +9,14 @@ const ingredients = [
 
 const ingredientsEl = document.querySelector('#ingredients');
 
-const liElements = ingredients.map((value) => {
-    const liEl = document.createElement('li');
-    liEl.textContent = value;
+const makeLiElementsFromArray = array => {
+   return array.map((value) => {
+        const liEl = document.createElement('li');
+        liEl.textContent = value;
 
-    return liEl;
-})
+        return liEl;
+    })
 
-ingredientsEl.append(...liElements);
+}
+const liElement = makeLiElementsFromArray(ingredients);
+ingredientsEl.append(...liElement);
