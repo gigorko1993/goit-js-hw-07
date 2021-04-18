@@ -2,11 +2,11 @@ const counterArray = {
     value: 0,
 
     onDecrementButtonEvent(){
-        this.value += 1;
+        this.value -= 1;
     },
     
     onIncrementButtonEvent(){
-        this.value -= 1;
+        this.value += 1;
     },
 };
 
