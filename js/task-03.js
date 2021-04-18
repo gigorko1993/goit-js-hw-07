@@ -17,12 +17,21 @@ const images = [
 ];
 
 const galleryEl = document.querySelector('#gallery');
+galleryEl.classList.add('list-images')
+// galleryEl.style.display = 'grid';
+// galleryEl.style.gridTemplateColumns = '1fr 1fr 1fr';
+// galleryEl.style.gridAutoRows = 'min-content';
+// galleryEl.style.gridGap = '5px';
+// galleryEl.style.padding = '5px 5px';
+// galleryEl.style.margin = '0px';
+// galleryEl.style.backgroundColor = 'teal';
+
 
 const makeImagesMarkup = val => {
-    const { img, url } = val;
+    const { url, alt } = val;
     return `
-        <li>
-            <img url="${url}" alt="alt"></img>
+        <li class="list-images__item">
+            <img class="list-images__image" src="${url}" alt="${alt}"></img>
         </li>
     `;
 }
@@ -30,17 +39,7 @@ const makeImagesMarkup = val => {
 const makeImageFromArray = images.map(makeImagesMarkup)
   .join('');
 galleryEl.insertAdjacentHTML('beforeend', makeImageFromArray);
-// const makeImageFromArray = (array) => {
-//     return array.map(arr => {
-//         const liTag = document.createElement('li');
-//         const imageTag = document.createElement('img');
-//         imageTag.url = arr.url;
-//         imageTag.alt = arr.alt;
 
-//         liTag.appendChild(imageTag);
 
-//         return liTag;
-//     })
-// }
-// const imageElement = makeImageFromArray(images);
-// galleryEl.append(...imageElement);
+
+
