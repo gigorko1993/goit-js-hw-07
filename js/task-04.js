@@ -10,18 +10,19 @@ const counterArray = {
     },
 };
 
-const counterButtonsEl = document.querySelectorAll('#counter button');
-const counterValue = document.querySelector('#value');
+const refs = {
+    counterValue: document.querySelector('#value'),
+    decrementCounterBtn: document.querySelector('[data-action="decrement"]'),
+    incrementCounterBtn: document.querySelector('[data-action="increment"]'),
+};
 
-const decrementCounterBtn = counterButtonsEl[0];
-const incrementCounterBtn = counterButtonsEl[1];
-
-decrementCounterBtn.addEventListener('click', () => {
+refs.decrementCounterBtn.addEventListener('click', () => {
     counterArray.onDecrementButtonEvent();
-    counterValue.textContent = counterArray.value;
+    refs.counterValue.textContent = counterArray.value;
 });
-incrementCounterBtn.addEventListener('click', () => {
+
+refs.incrementCounterBtn.addEventListener('click', () => {
     counterArray.onIncrementButtonEvent();
-    counterValue.textContent = counterArray.value;
+    refs.counterValue.textContent = counterArray.value;
 });
 
