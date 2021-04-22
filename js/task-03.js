@@ -18,13 +18,6 @@ const images = [
 
 const galleryEl = document.querySelector('#gallery');
 galleryEl.classList.add('list-images')
-// galleryEl.style.display = 'grid';
-// galleryEl.style.gridTemplateColumns = '1fr 1fr 1fr';
-// galleryEl.style.gridAutoRows = 'min-content';
-// galleryEl.style.gridGap = '5px';
-// galleryEl.style.padding = '5px 5px';
-// galleryEl.style.margin = '0px';
-// galleryEl.style.backgroundColor = 'teal';
 
 
 const makeImagesMarkup = val => {
