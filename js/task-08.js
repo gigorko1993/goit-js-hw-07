@@ -7,7 +7,6 @@ const divFactory = {
 
     onDivMarkupCreate() {
        let { div, number, width, height } = this;
-        div = "";
         if (number > 0) {
             for (let i = 1; i <= number; i += 1) {
                 div += `<div style="width: ${width + 10 * (i - 1)}px; height: ${height + 10 * (i - 1)}px; background-color: ${this.makeRandomRGBColor()}"></div>`;
