@@ -16,5 +16,3 @@ function onInputChange(event) {
         ? refs.input.classList.add('invalid')
         : refs.input.classList.remove('invalid');
 }
-
-console.log(refs.input.dataset.length)
