@@ -8,7 +8,7 @@ const requireLength = refs.input.dataset.length;
 function onInputChange(event) {
     const inputLength = event.currentTarget.value.length;
     
-    inputLength == requireLength
+    inputLength === requireLength
     ? refs.input.classList.add('valid')
     : refs.input.classList.remove('valid');
     
